@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neut - Coming Soon</title>
+  <style>
+    :root {
+      --tan: #CEAC93;
+      --orange: #DB994B;
+      --black: #130900;
+    }
+
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--tan);
+      color: var(--black);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      max-width: 800px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--black);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .coming-soon {
+      margin: 2.5rem 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--orange);
+    }
+
+    .notify-section {
+      background-color: var(--black);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .notify-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .notify-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .notify-form input[type="email"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 300px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .notify-form button {
+      background-color: var(--orange);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .notify-form button:hover {
+      background-color: #b77435; /* Darker orange hover */
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #333;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MAIN CONTENT -->
+  <header>
+    <h1>Neut</h1>
+    <p>
+      At Neut, we believe everyone deserves straightforward, unbiased access to 
+      government data—no spin, no clutter. We’re a small team of three founders on a 
+      mission to turn raw information from sources like Data.gov into easy-to-digest 
+      insights. Our platform helps you track legislation, follow government activities, 
+      and form your own informed opinions. Currently in alpha testing, we’re refining 
+      Neut alongside a community of curious, engaged users. If you’re ready to cut 
+      through the noise and get the facts that matter, join us and help shape the 
+      future of transparent, fact-based discussion.
+    </p>
+    <div class="coming-soon">
+      Coming soon to mobile devices near you!
+    </div>
+  </header>
+
+  <!-- NOTIFY SECTION -->
+  <section class="notify-section">
+    <h2>Get notified when we launch</h2>
+    <form class="notify-form">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit">Notify Me</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Neut. All rights reserved.
+  </footer>
+
+  <!-- Script to set current year in footer -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
